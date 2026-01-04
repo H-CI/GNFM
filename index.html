@@ -191,39 +191,76 @@
     <!--/ Dataset. -->
 
     <section>
-      <h2>Key Contributions</h2>
-      <div class="overview-grid">
-        <div class="card">
-          <h3>Contribution 1</h3>
-          <p>Brief description of the first key idea.</p>
-        </div>
-        <div class="card">
-          <h3>Contribution 2</h3>
-          <p>Brief description of the second key idea.</p>
-        </div>
-        <div class="card">
-          <h3>Contribution 3</h3>
-          <p>Brief description of the third key idea.</p>
-        </div>
-      </div>
-    </section>
+  <h2>Key Contributions</h2>
+  <div class="overview-grid">
 
-    <section>
-      <h2>Method</h2>
+    <div class="card">
+      <h3>Joint Multiresolution Hash Encoder (JMHE)</h3>
       <p>
-        We propose a pipeline consisting of three stages: XXX, XXX, and XXX.
-        The core design is illustrated below.
+        We introduce a Joint Multiresolution Hash Encoder that jointly encodes
+        spatial positions and viewing directions. This design enhances the
+        recovery of fine structures and surface details, which are critical for
+        accurately modeling small and reflective surgical instruments.
       </p>
-      <img class="hero-img" src="assets/method.png" alt="Method figure" />
-    </section>
+    </div>
 
-    <section>
-      <h2>Results</h2>
+    <div class="card">
+      <h3>View-Conditional Feature-wise Linear Modulation (V-FiLM)</h3>
       <p>
-        Our approach outperforms prior methods both quantitatively and qualitatively.
+        We propose a View-Conditional Feature-wise Linear Modulation module that
+        adaptively modulates neural features based on viewing direction, enabling
+        improved rendering of specular highlights and other view-dependent effects.
       </p>
-      <img class="hero-img" src="assets/results.png" alt="Results figure" />
-    </section>
+    </div>
+
+    <div class="card">
+      <h3>Reflective Surgical Instrument Dataset (RSID)</h3>
+      <p>
+        We introduce RSID, a new dataset containing 8 categories of surgical
+        instruments with 2,400 multi-view images, specifically designed to
+        evaluate reconstruction and rendering under highly reflective conditions.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Method</h2>
+  <p>
+    GNFM builds upon the Generalizable NeRF Transformer (GNT) framework and
+    augments it with view-aware and geometry-sensitive feature modeling.
+    Specifically, JMHE performs joint spatial and directional encoding to
+    strengthen fine-structure representation, while V-FiLM dynamically modulates
+    intermediate features conditioned on viewing direction.
+  </p>
+
+  <p>
+    Together, these components enable GNFM to better handle specular surfaces
+    and view-dependent reflections, while preserving cross-scene generalization
+    and maintaining computational efficiency comparable to existing methods.
+  </p>
+
+  <img class="hero-img" src="assets/method.png" alt="GNFM method pipeline" />
+</section>
+
+<section>
+  <h2>Results</h2>
+  <p>
+    We evaluate GNFM on both synthetic and real-world reflective surgical
+    instrument datasets. Experimental results show that GNFM consistently
+    improves the recovery of fine structures and the rendering of specular
+    surfaces.
+  </p>
+
+  <p>
+    Quantitatively, GNFM achieves approximately <strong>5%</strong> improvements
+    over competitive baselines in metrics including PSNR, SSIM, and LPIPS, while
+    maintaining comparable computational efficiency.
+  </p>
+
+  <img class="hero-img" src="assets/results.png" alt="GNFM results" />
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
