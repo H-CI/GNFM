@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Orientation Matters: Making 3D Generative Models Orientation-Aligned">
+  <meta name="keywords" content="holistic, urban, understanding, gaussian, reconstruction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Orientation Matters: Making 3D Generative Models Orientation-Aligned</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FWSVCGZTG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-1FWSVCGZTG');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./css/twentytwenty.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/jquery.event.move.js"></script>
+  <script src="./js/jquery.twentytwenty.js"></script>
+  <script src="./js/bulma-carousel.min.js"></script>
+  <script src="./js/bulma-slider.min.js"></script>
+  <script src="./js/fontawesome.all.min.js"></script>
+
+  <!--MathJax-->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Orientation Matters: Making 3D Generative Models Orientation-Aligned</h1>
+          <h3 class="title is-3">NeurIPS 2025</h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yichonglu.github.io">Yichong Lu</a><sup>1,2*</sup>,</span>
+            <span class="author-block">
+              Yuzhuo Tian</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              Zijin Jiang</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              Yikun Zhao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Yuanbo Yang</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ken-ouyang.github.io/">Hao Ouyang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=kFnuXyAAAAAJ&hl=zh-TW">Haoji Hu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+             Huimin Yu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://shenyujun.github.io/">Yujun Shen</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://yiyiliao.github.io">Yiyi Liao</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
+            <span class="author-block"><sup>2</sup>Ant Group</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1kVpaZPBYNnlf9u5KCcxa4pRvuEpa8TIk/view?usp=drive_link"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2506.08640"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+               <span class="link-block">
+                <a href="https://youtu.be/_g3krVsVXs4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/YichongLu/Orientation_Matters"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/Louischong/Objaverse-OA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <img src="./images/hf-logo.svg" alt="Hugging Face logo" class="hf-icon">
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+                <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/Louischong/Trellis-OA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <img src="./images/hf-logo.svg" alt="Hugging Face logo" class="hf-icon">
+                  </span>
+                  <span>Demo</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      
+      
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <!-- Overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Overview</h2>        
+        <img id="teaser" width="100%" src="./images/teaser_final.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <div class="content has-text-justified">
+          <p>
+            Humans intuitively perceive object shape and orientation from a single image,
+            guided by strong priors about <b>canonical poses</b>. However, existing 3D generative
+            models often produce misaligned results due to inconsistent training data, limiting
+            their usability in downstream tasks. To address this gap, we introduce the task
+            of <b>orientation-aligned 3D object generation</b>: producing 3D objects from single
+            images with consistent orientations across categories. To facilitate this, we construct
+            <b>Objaverse-OA</b>, a dataset of 14,832 orientation-aligned 3D models spanning
+            <b>1,008 categories</b>. Leveraging Objaverse-OA, we fine-tune two representative 3D
+            generative models based on multi-view diffusion and 3D variational autoencoder
+            frameworks to produce aligned objects that generalize well to unseen objects across
+            various categories. Experimental results demonstrate the superiority of our method
+            over post-hoc alignment approaches. Furthermore, we showcase downstream applications
+            enabled by our aligned object generation, including <b>zero-shot model-free object
+            orientation estimation</b> via analysis-by-synthesis and <b>efficient arrow-based object
+            manipulation</b>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview. -->
+
+    <!-- Dataset. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Dataset Curation</h2>
+        <img id="pipeline" width="100%" src="./images/dataset.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <div class="content has-text-justified">
+        <p>
+          We employ VLM pre-processing and manual correction to curate our Objaverse-OA dataset, striking a balance between efficiency and accuracy. We show the error rate of VLM’s estimation across different categories above. We
+          observe that (1) the VLM demonstrates particular difficulty in recognizing front-facing
+          orientations for stick-like objects, and (2) a significant portion of recognition errors occur when
+          processing objects with inherently ambiguous or unclear frontal views. These challenges highlight the necessity
+          of our manual curation.
+        </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Dataset. -->
+
+    <!-- Orientation-Aligned 3D Generation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Orientation-Aligned 3D Generation <br>
+        Based on Two Representative Frameworks</h2>
+        <br>
+        <h3 class="title is-4">Pipeline</h3>
+        <img id="pipeline" width="100%" src="./images/pipeline1.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <div class="content has-text-justified">
+        <br>
+        <p>
+          We fine-tune two representative methods: Trellis,
+          based on a 3D-VAE backbone (top), and Wonder3D, based on a multi-view diffusion backbone
+          (bottom). For the 3D-VAE, we find that fine-tuning only the sparse structure generator is sufficient
+          to produce orientation-aligned objects. For the multi-view diffusion model, we adopt LoRA as a
+          lightweight domain adapter to enable the generation of orientation-aligned target images.
+        </p>
+        </div>
+<!--         <br>
+        <h3 class="title is-4">Comparison to Baselines</h3>
+        <img id="quan_1" width="60%" src="./images/trellis_quantitative.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <img id="quan_2" width="60%" src="./images/wonder3d_quantitative.png" alt="Teaser image demonstrating Marigold depth estimation."/> -->
+
+        <br>
+        <h3 class="title is-4">More Qualitative Results</h3>
+        <video id="teaser" autoplay muted controls loop playsinline height="100%">
+          <source src="./videos/more_result1.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="more_2" autoplay muted controls loop playsinline height="100%">
+          <source src="./videos/more_result2.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="more_2" autoplay muted controls loop playsinline height="100%">
+          <source src="./videos/more_result3.mp4"
+                  type="video/mp4">
+        </video>
+        
+      </div>
+    </div>
+    <!-- Orientation-Aligned 3D Generation. -->
+    
+    <!-- Zero-shot Orientation Estimation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Zero-shot Model-free Orientation Estimation</h2>
+        <br>
+        <h3 class="title is-4">Pipeline</h3>
+        <img id="pipeline" width="100%" src="./images/pipeline2.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <div class="content has-text-justified">
+        <p>
+          Our zero-shot model-free orientation estimation method includes three stages: 3D generation, pose refinement, and pose selection. Our orientation-aligned 3D object acts as a template for pose estimation by rendering it from multiple views, refining each, and selecting the best-matching
+          viewpoint. Note that we do not perform training for this downstream task, where the pose refinement
+          module is directly from FoundationPose, and the pose selection module directly utilizes the pre-trained DINO feature extractor.
+        </p>
+        </div>
+        <br>
+        <h3 class="title is-4">Qualitative Results</h3>
+        <video id="teaser" autoplay muted controls loop playsinline height="100%">
+          <source src="./videos/orientation_estimation.mp4"
+                  type="video/mp4">
+        </video>
+        
+      </div>
+    </div>
+    <!-- Zero-shot Orientation Estimation. -->
+
+    <!-- Efficient Arrow-based Object Rotation Manipulation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Efficient Arrow-based Object Rotation Manipulation</h2>
+        <div class="content has-text-justified">
+        <p>
+          It is difficult to manipulate the rotation of 3D models with uncanonical poses in the downstream applications. 
+          Based on our generated orientation-aligned 3D models, we design an arrow-based object rotation manipulation operation, which allows users to 
+          efficiently manipulate the rotation of the 3D models in both augmented reality applications and generic 3D software.
+        </p>
+        </div>
+        <br>
+        <h3 class="title is-4">Usage in the Augmented Reality Applications</h3>
+        <video id="teaser" autoplay muted controls loop playsinline height="100%">
+          <source src="./videos/rot_mani_ar.mp4"
+                  type="video/mp4">
+        </video>
+
+        <br>
+        <br>
+        <h3 class="title is-4">Usage in the 3D Softwares</h3>
+        <video id="teaser" autoplay muted controls loop playsinline height="100%">
+          <source src="./videos/rot_mani_blender.mp4"
+                  type="video/mp4">
+        </video>
+        
+      </div>
+    </div>
+    <!-- Efficient Arrow-based Object Rotation Manipulation. -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+      lu2025orientation,
+      title={Orientation Matters: Making 3D Generative Models Orientation-Aligned},
+      author={Yichong Lu and Yuzhuo Tian and Zijin Jiang and Yikun Zhao and Yuanbo Yang and Hao Ouyang and Haoji Hu and Huimin Yu and Yujun Shen and Yiyi Liao},
+      booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+      year={2025},
+      url={https://openreview.net/forum?id=YVOCwQF9k2}
+      }</code></pre>
+  </div>
+</section>
+
+<footer class="footer pt-4 pb-0">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+            <p>
+            Website template based on
+            <a href="https://github.com/nerfies/nerfies.github.io">
+              Nerfies
+            </a>
+            and licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              CC-BY-SA-4.0
+            </a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html> 
