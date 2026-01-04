@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Orientation Matters: Making 3D Generative Models Orientation-Aligned">
-  <meta name="keywords" content="holistic, urban, understanding, gaussian, reconstruction">
+        content="GNFM: Generalizable NeRF with View-Aware Feature Modulation for Reflective Surgical Instrument Rendering toward Robot-assisted Surgery">
+  <meta name="keywords" content="nerf, rendering, understanding, gaussian, reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Orientation Matters: Making 3D Generative Models Orientation-Aligned</title>
@@ -62,49 +62,27 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Orientation Matters: Making 3D Generative Models Orientation-Aligned</h1>
-          <h3 class="title is-3">NeurIPS 2025</h3>
+          <h1 class="title is-1 publication-title">GNFM: Generalizable NeRF with View-Aware Feature Modulation for Reflective Surgical Instrument Rendering toward Robot-assisted Surgery</h1>
+          <h3 class="title is-3">Computational Visual Media Conference 2026</h3>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://yichonglu.github.io">Yichong Lu</a><sup>1,2*</sup>,</span>
+              <a href="https://orcid.org/0009-0004-5660-0555">Lifei Xiao</a><sup>1</sup>,</span>
+            
             <span class="author-block">
-              Yuzhuo Tian</a><sup>1*</sup>,</span>
-            <span class="author-block">
-              Zijin Jiang</a><sup>1*</sup>,
-            </span>
-            <span class="author-block">
-              Yikun Zhao</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              Yuanbo Yang</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://ken-ouyang.github.io/">Hao Ouyang</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=kFnuXyAAAAAJ&hl=zh-TW">Haoji Hu</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-             Huimin Yu</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://shenyujun.github.io/">Yujun Shen</a><sup>2</sup>
-            </span>
-            <span class="author-block">
-              <a href="https://yiyiliao.github.io">Yiyi Liao</a><sup>1</sup>
+              Zhenjie Zhao</a><sup>2*</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
-            <span class="author-block"><sup>2</sup>Ant Group</span>
+            <span class="author-block"><sup>1</sup>Nanjing University of Information Science and Technology,</span>
+            <span class="author-block"><sup>2</sup>Nankai University</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://drive.google.com/file/d/1kVpaZPBYNnlf9u5KCcxa4pRvuEpa8TIk/view?usp=drive_link"
+                <a href="https:paper_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -113,7 +91,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2506.08640"
+                <a href="https://arxiv_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -123,7 +101,7 @@
               </span>
               <!-- Video Link. -->
                <span class="link-block">
-                <a href="https://youtu.be/_g3krVsVXs4"
+                <a href="https:video_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -133,7 +111,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/YichongLu/Orientation_Matters"
+                <a href="https://github.com/lifeiXiao/GNFM"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -143,7 +121,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/Louischong/Objaverse-OA"
+                <a href="https://github.com/lifeiXiao/GNFM"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <img src="./images/hf-logo.svg" alt="Hugging Face logo" class="hf-icon">
@@ -152,7 +130,7 @@
                   </a>
                 <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/spaces/Louischong/Trellis-OA"
+                <a href="https://github.com/lifeiXiao/GNFM"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <img src="./images/hf-logo.svg" alt="Hugging Face logo" class="hf-icon">
@@ -184,24 +162,14 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
         <h2 class="title is-3">Overview</h2>        
-        <img id="teaser" width="100%" src="./images/teaser_final.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <img id="teaser" width="100%" src="./images/results.png" alt="Teaser image demonstrating Marigold depth estimation."/>
         <div class="content has-text-justified">
           <p>
-            Humans intuitively perceive object shape and orientation from a single image,
-            guided by strong priors about <b>canonical poses</b>. However, existing 3D generative
-            models often produce misaligned results due to inconsistent training data, limiting
-            their usability in downstream tasks. To address this gap, we introduce the task
-            of <b>orientation-aligned 3D object generation</b>: producing 3D objects from single
-            images with consistent orientations across categories. To facilitate this, we construct
-            <b>Objaverse-OA</b>, a dataset of 14,832 orientation-aligned 3D models spanning
-            <b>1,008 categories</b>. Leveraging Objaverse-OA, we fine-tune two representative 3D
-            generative models based on multi-view diffusion and 3D variational autoencoder
-            frameworks to produce aligned objects that generalize well to unseen objects across
-            various categories. Experimental results demonstrate the superiority of our method
-            over post-hoc alignment approaches. Furthermore, we showcase downstream applications
-            enabled by our aligned object generation, including <b>zero-shot model-free object
-            orientation estimation</b> via analysis-by-synthesis and <b>efficient arrow-based object
-            manipulation</b>.
+            Accurate 3D reconstruction of small, highly reflective surgical instruments is essential for robust perception and safe operation in robot-assisted surgery. 
+            However, traditional multi-view reconstruction methods often fail to capture subtle geometry and view-dependent reflections, especially under specular surfaces and fine structures.
+            Motivated by recent advances in Neural Radiance Fields (NeRF), we investigate their potential for reconstructing surgical instruments, where photorealistic rendering serves as an indicator of 3D surface fidelity. Despite their success, 
+            conventional NeRFs require dense per-scene training, lack cross-scene generalization, and struggle with specular highlights—limitations that are particularly problematic in surgical scenarios.
+            To address these challenges, we propose GNFM, a Generalizable NeRF with View-Aware Feature Modulation, which extends the Generalizable NeRF Transformer (GNT) to enable robust and generalizable rendering of reflective surgical instruments.
           </p>
         </div>
       </div>
@@ -211,117 +179,51 @@
     <!-- Dataset. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
-        <h2 class="title is-3">Dataset Curation</h2>
+        <h2 class="title is-3">Dataset Construction</h2>
         <img id="pipeline" width="100%" src="./images/dataset.png" alt="Teaser image demonstrating Marigold depth estimation."/>
         <div class="content has-text-justified">
         <p>
-          We employ VLM pre-processing and manual correction to curate our Objaverse-OA dataset, striking a balance between efficiency and accuracy. We show the error rate of VLM’s estimation across different categories above. We
-          observe that (1) the VLM demonstrates particular difficulty in recognizing front-facing
-          orientations for stick-like objects, and (2) a significant portion of recognition errors occur when
-          processing objects with inherently ambiguous or unclear frontal views. These challenges highlight the necessity
-          of our manual curation.
+          We introduce RSID, a new dataset containing 8 categories of surgical instruments with 2,400 multi-view images, specifically designed to evaluate reconstruction and rendering under highly reflective conditions.
         </p>
         </div>
       </div>
     </div>
     <!--/ Dataset. -->
 
-    <!-- Orientation-Aligned 3D Generation. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-five-fifths">
-        <h2 class="title is-3">Orientation-Aligned 3D Generation <br>
-        Based on Two Representative Frameworks</h2>
-        <br>
-        <h3 class="title is-4">Pipeline</h3>
-        <img id="pipeline" width="100%" src="./images/pipeline1.png" alt="Teaser image demonstrating Marigold depth estimation."/>
-        <div class="content has-text-justified">
-        <br>
-        <p>
-          We fine-tune two representative methods: Trellis,
-          based on a 3D-VAE backbone (top), and Wonder3D, based on a multi-view diffusion backbone
-          (bottom). For the 3D-VAE, we find that fine-tuning only the sparse structure generator is sufficient
-          to produce orientation-aligned objects. For the multi-view diffusion model, we adopt LoRA as a
-          lightweight domain adapter to enable the generation of orientation-aligned target images.
-        </p>
+    <section>
+      <h2>Key Contributions</h2>
+      <div class="overview-grid">
+        <div class="card">
+          <h3>Contribution 1</h3>
+          <p>Brief description of the first key idea.</p>
         </div>
-<!--         <br>
-        <h3 class="title is-4">Comparison to Baselines</h3>
-        <img id="quan_1" width="60%" src="./images/trellis_quantitative.png" alt="Teaser image demonstrating Marigold depth estimation."/>
-        <img id="quan_2" width="60%" src="./images/wonder3d_quantitative.png" alt="Teaser image demonstrating Marigold depth estimation."/> -->
-
-        <br>
-        <h3 class="title is-4">More Qualitative Results</h3>
-        <video id="teaser" autoplay muted controls loop playsinline height="100%">
-          <source src="./videos/more_result1.mp4"
-                  type="video/mp4">
-        </video>
-        <video id="more_2" autoplay muted controls loop playsinline height="100%">
-          <source src="./videos/more_result2.mp4"
-                  type="video/mp4">
-        </video>
-        <video id="more_2" autoplay muted controls loop playsinline height="100%">
-          <source src="./videos/more_result3.mp4"
-                  type="video/mp4">
-        </video>
-        
-      </div>
-    </div>
-    <!-- Orientation-Aligned 3D Generation. -->
-    
-    <!-- Zero-shot Orientation Estimation. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-five-fifths">
-        <h2 class="title is-3">Zero-shot Model-free Orientation Estimation</h2>
-        <br>
-        <h3 class="title is-4">Pipeline</h3>
-        <img id="pipeline" width="100%" src="./images/pipeline2.png" alt="Teaser image demonstrating Marigold depth estimation."/>
-        <div class="content has-text-justified">
-        <p>
-          Our zero-shot model-free orientation estimation method includes three stages: 3D generation, pose refinement, and pose selection. Our orientation-aligned 3D object acts as a template for pose estimation by rendering it from multiple views, refining each, and selecting the best-matching
-          viewpoint. Note that we do not perform training for this downstream task, where the pose refinement
-          module is directly from FoundationPose, and the pose selection module directly utilizes the pre-trained DINO feature extractor.
-        </p>
+        <div class="card">
+          <h3>Contribution 2</h3>
+          <p>Brief description of the second key idea.</p>
         </div>
-        <br>
-        <h3 class="title is-4">Qualitative Results</h3>
-        <video id="teaser" autoplay muted controls loop playsinline height="100%">
-          <source src="./videos/orientation_estimation.mp4"
-                  type="video/mp4">
-        </video>
-        
-      </div>
-    </div>
-    <!-- Zero-shot Orientation Estimation. -->
-
-    <!-- Efficient Arrow-based Object Rotation Manipulation. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-five-fifths">
-        <h2 class="title is-3">Efficient Arrow-based Object Rotation Manipulation</h2>
-        <div class="content has-text-justified">
-        <p>
-          It is difficult to manipulate the rotation of 3D models with uncanonical poses in the downstream applications. 
-          Based on our generated orientation-aligned 3D models, we design an arrow-based object rotation manipulation operation, which allows users to 
-          efficiently manipulate the rotation of the 3D models in both augmented reality applications and generic 3D software.
-        </p>
+        <div class="card">
+          <h3>Contribution 3</h3>
+          <p>Brief description of the third key idea.</p>
         </div>
-        <br>
-        <h3 class="title is-4">Usage in the Augmented Reality Applications</h3>
-        <video id="teaser" autoplay muted controls loop playsinline height="100%">
-          <source src="./videos/rot_mani_ar.mp4"
-                  type="video/mp4">
-        </video>
-
-        <br>
-        <br>
-        <h3 class="title is-4">Usage in the 3D Softwares</h3>
-        <video id="teaser" autoplay muted controls loop playsinline height="100%">
-          <source src="./videos/rot_mani_blender.mp4"
-                  type="video/mp4">
-        </video>
-        
       </div>
-    </div>
-    <!-- Efficient Arrow-based Object Rotation Manipulation. -->
+    </section>
+
+    <section>
+      <h2>Method</h2>
+      <p>
+        We propose a pipeline consisting of three stages: XXX, XXX, and XXX.
+        The core design is illustrated below.
+      </p>
+      <img class="hero-img" src="assets/method.png" alt="Method figure" />
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <p>
+        Our approach outperforms prior methods both quantitatively and qualitatively.
+      </p>
+      <img class="hero-img" src="assets/results.png" alt="Results figure" />
+    </section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
