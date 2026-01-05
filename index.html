@@ -299,57 +299,52 @@
 </div>
 </section>
 
-
-    
-<section>
-  <div class="columns is-centered has-text-centered">
-  <div class="column is-five-fifths">
-  <h2 class="title is-3">Method</h2>
-      <img class="hero-img" src="images/gnfm_framework.png" alt="GNFM method pipeline" />
-    <div class="content has-text-justified">
-  <p>
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <!--Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Overview</h2>        
+        <img id="teaser" width="100%" src="./images/gnfm_framework.png" alt="GNFM method pipeline."/>
+        <div class="content has-text-justified">
+          <p>
     GNFM builds upon the Generalizable NeRF Transformer (GNT) framework and
     augments it with view-aware and geometry-sensitive feature modeling.
     Specifically, JMHE performs joint spatial and directional encoding to
     strengthen fine-structure representation, while V-FiLM dynamically modulates
     intermediate features conditioned on viewing direction.
-  </p>
-
-  <p>
-    Together, these components enable GNFM to better handle specular surfaces
+                Together, these components enable GNFM to better handle specular surfaces
     and view-dependent reflections, while preserving cross-scene generalization
     and maintaining computational efficiency comparable to existing methods.
-  </p>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview. -->
 
-</div>
-</div>
+    <!--Results. -->
     <div class="columns is-centered has-text-centered">
-  <div class="column is-five-fifths">
-  <h2 class="title is-3>Results</h2>
-    <img class="hero-img" src="assets/results.png" alt="GNFM Results" />
-    <div class="content has-text-justified">
-  <p>
-    We evaluate GNFM on both synthetic and real-world reflective surgical
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Dataset Construction</h2>
+        <img id="pipeline" width="100%" src="./images/blender_results.png" alt="GNFM Results."/>
+        <div class="content has-text-justified">
+        <p>
+              We evaluate GNFM on both synthetic and real-world reflective surgical
     instrument datasets. Experimental results show that GNFM consistently
     improves the recovery of fine structures and the rendering of specular
     surfaces.
-  </p>
-
-  <p>
-    Quantitatively, GNFM achieves approximately <strong>5%</strong> improvements
+          Quantitatively, GNFM achieves approximately <strong>5%</strong> improvements
     over competitive baselines in metrics including PSNR, SSIM, and LPIPS, while
     maintaining comparable computational efficiency.
-  </p>
-
+        </p>
+        </div>
+      </div>
     </div>
-</div>
-</div>
+    <!--/ Results. -->
+
+  </section>
     
-</section>
-
-<section>
-
-</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
